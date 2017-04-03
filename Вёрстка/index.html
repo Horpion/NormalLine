@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Стартовая страница</title>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+		<!--if lt IE 9
+		script(src='https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js')
+		script(src='https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js')
+		-->
+	</head>
+	<body>
+		
+
+	<div class="container">
+		
+		<header class="header text-center">
+			<h1 class="header__title"><a class="header__href" href="#">Normal Line</a></h1>
+			<p class="header__subtitle">Новостной блог про веб-разработку</p>
+		</header>
+
+
+		<!-- Content -->
+		<div class="table">
+			<aside class="aside bg-black padding-menu table-cell">
+
+				<div class="panel">
+					<form action="/" id="autorization" method="post" class="autorization">
+						<input type="text" class="autorization__login" name="autor-login" placeholder="Логин" required>
+						<input type="password" class="autorization__pass" name="autor-pass" placeholder="Пароль" required>
+					</form>
+					<input type="submit" form="autorization" class="autorization__submit" value="Вход">
+					<div class="registration">
+						<button class="registration__button">Регистрация</button>
+						<form action="" method="post" class="registration__form">
+							<span class="registration__inform">information</span>
+							<input type="text" class="registration__login" name="reg-login" placeholder="Логин" required="">
+							<input type="password" class="registration__pass" name="reg-pass" placeholder="Пароль" required="">
+							<input type="password" class="registration__pass" name="reg-pass2" placeholder="Пароль" required="">
+							<input type="submit" class="registration__submit" value="Отправить">
+							<input type="reset" class="registration__reset" value="Очистить">
+						</form>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<h2 class="block__title">Меню сайта</h2>
+					<ul class="block-list">
+						<li class="block-list__item">
+							<a href="index.html" class="block-list__href">Главная</a>
+						</li>
+						<li class="block-list__item">
+							<a href="category.html" class="block-list__href">Категории</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href">Шаблоны</a>
+						</li>
+					</ul>
+				</div>
+				<div class="block">
+					<h2 class="block__title">Популярные посты</h2>
+					<ul class="block-list block-list--padding">
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Тестирование компонентов в Un.Тестирование компонентов в Un...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Программируем арт: openFramewor...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="content bg-white padding-content table-cell">
+				<main role="main" class="main">
+					<h2 class="main__title">последние публикации</h2>
+
+
+					<div class="article">
+						<h3 class="article__title"><a href="#" class="article__href">Выразительный JavaScript: Обработка событий</a></h3>
+						<div class="article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="article__text">Вы властны над своим разумом, но не над внешними событиями. Когда вы поймёте это, вы обретёте силу. Марк Аврелий, «Медитации». Некоторые программы работают с вводом пользователя, мышью и клавиатурой. Время возникновения такого ввода и последовательность данных нельзя предсказать заранее. Это требует иного подхода к контролю над порядком выполнения программы, чем уже привычный нам.</div>
+						<a href="#" class="article__read">Читать дальше</a>
+					</div>
+
+					<div class="article">
+						<h3 class="article__title"><a href="#" class="article__href">Выразительный JavaScript: Обработка событий</a></h3>
+						<div class="article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="article__text">Вы властны над своим разумом, но не над внешними событиями. Когда вы поймёте это, вы обретёте силу. Марк Аврелий, «Медитации». Некоторые программы работают с вводом пользователя, мышью и клавиатурой. Время возникновения такого ввода и последовательность данных нельзя предсказать заранее. Это требует иного подхода к контролю над порядком выполнения программы, чем уже привычный нам.</div>
+						<a href="#" class="article__read">Читать дальше</a>
+					</div>
+
+					<div class="article">
+						<h3 class="article__title"><a href="#" class="article__href">Выразительный JavaScript: Обработка событий</a></h3>
+						<div class="article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="article__text">Вы властны над своим разумом, но не над внешними событиями. Когда вы поймёте это, вы обретёте силу. Марк Аврелий, «Медитации». Некоторые программы работают с вводом пользователя, мышью и клавиатурой. Время возникновения такого ввода и последовательность данных нельзя предсказать заранее. Это требует иного подхода к контролю над порядком выполнения программы, чем уже привычный нам.</div>
+						<a href="#" class="article__read">Читать дальше</a>
+					</div>
+
+					<div class="article">
+						<h3 class="article__title"><a href="#" class="article__href">Выразительный JavaScript: Обработка событий</a></h3>
+						<div class="article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="article__text">Вы властны над своим разумом, но не над внешними событиями. Когда вы поймёте это, вы обретёте силу. Марк Аврелий, «Медитации». Некоторые программы работают с вводом пользователя, мышью и клавиатурой. Время возникновения такого ввода и последовательность данных нельзя предсказать заранее. Это требует иного подхода к контролю над порядком выполнения программы, чем уже привычный нам.</div>
+						<a href="#" class="article__read">Читать дальше</a>
+					</div>
+
+					<div class="article">
+						<h3 class="article__title"><a href="#" class="article__href">Выразительный JavaScript: Обработка событий</a></h3>
+						<div class="article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="article__text">Вы властны над своим разумом, но не над внешними событиями. Когда вы поймёте это, вы обретёте силу. Марк Аврелий, «Медитации». Некоторые программы работают с вводом пользователя, мышью и клавиатурой. Время возникновения такого ввода и последовательность данных нельзя предсказать заранее. Это требует иного подхода к контролю над порядком выполнения программы, чем уже привычный нам.</div>
+						<a href="#" class="article__read">Читать дальше</a>
+					</div>
+
+					<div class="pagination">
+						<a href="#" class="pagination__back">Назад</a>
+						<ul class="pagination__list">
+							<li class="pagination__item">
+								<a href="#" class="pagination__href pagination__href--active">1</a>
+							</li>
+							<li class="pagination__item">
+								<a href="#" class="pagination__href">2</a>
+							</li>
+							<li class="pagination__item">
+								<a href="#" class="pagination__href">3</a>
+							</li>
+							<li class="pagination__item">
+								<a href="#" class="pagination__href">4</a>
+							</li>
+							<li class="pagination__item">
+								<a href="#" class="pagination__href">5</a>
+							</li>
+						</ul>
+						<a href="#" class="pagination__next">Вперед</a>
+					</div>
+
+
+				</main>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h4 class="footer__title">NormaLine</h4>
+			<p class="footer__text">copyright - spiritcode 2015</p>
+		</footer>
+
+	</div>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/app.js"></script>	
+
+	</body>
+</html>

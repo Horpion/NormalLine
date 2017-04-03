@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
+		<title>Добавление контента</title>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+		<!--if lt IE 9
+		script(src='https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js')
+		script(src='https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js')
+		-->
+	</head>
+	<body>
+		
+
+	<div class="container">
+		
+		<header class="header text-center">
+			<h1 class="header__title"><a class="header__href" href="#">Normal Line</a></h1>
+			<p class="header__subtitle">Новостной блог про веб-разработку</p>
+		</header>
+
+
+		<!-- Content -->
+		<div class="row table">
+			<aside class="col-md-4 col-sm-4 col-xs-4 bg-black padding-menu table-cell">
+
+				<div class="panel">
+					<form action="/" id="autorization" method="post" class="autorization">
+						<input type="text" class="autorization__login" name="autor-login" placeholder="Логин" required>
+						<input type="password" class="autorization__pass" name="autor-pass" placeholder="Пароль" required>
+					</form>
+					<input type="submit" form="autorization" class="autorization__submit" value="Вход">
+					<div class="registration">
+						<button class="registration__button">Регистрация</button>
+						<form action="" method="post" class="registration__form">
+							<span class="registration__inform">information</span>
+							<input type="text" class="registration__login" name="reg-login" placeholder="Логин" required="">
+							<input type="password" class="registration__pass" name="reg-pass" placeholder="Пароль" required="">
+							<input type="password" class="registration__pass" name="reg-pass2" placeholder="Пароль" required="">
+							<input type="submit" class="registration__submit" value="Отправить">
+							<input type="reset" class="registration__reset" value="Очистить">
+						</form>
+					</div>
+				</div>
+
+
+				<div class="block">
+					<h2 class="block__title">Меню сайта</h2>
+					<ul class="block-list">
+						<li class="block-list__item">
+							<a href="index.html" class="block-list__href">Главная</a>
+						</li>
+						<li class="block-list__item">
+							<a href="category.html" class="block-list__href">Категории</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href">Шаблоны</a>
+						</li>
+					</ul>
+				</div>
+				<div class="block">
+					<h2 class="block__title">Популярные посты</h2>
+					<ul class="block-list block-list--padding">
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Тестирование компонентов в Un.Тестирование компонентов в Un...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Программируем арт: openFramewor...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="col-md-8 col-sm-8 col-xs-8 bg-white padding-content table-cell">
+				<main role="main" class="main">
+					<h2 class="main__title">Добавление новости</h2>
+
+
+					<form action="" method="POST" class="add-content" enctype="multipart/form-data">
+
+						<!-- Заголовок статьи -->
+						<label for="add-content__art-title-label" class="add-content__art-title">Заголовок статьи: </label> <br>
+						<input id="add-content__art-title-label" name="article-title" class="add-content__art-title-label" type="text" required=""> <br>
+						
+						<!-- Миниатюра -->
+						<label for="add-content__art-img-label" class="add-content__art-img">Миниатюра: </label> <br>
+						<input id="add-content__art-img-label" name="article-img" class="add-content__art-img-label" type="file" required=""> <br>
+
+						<!-- Краткое описание -->
+						<label for="add-content__art-shortShort-label" class="add-content__art-shortShort">Краткое описание: </label> <br>
+						<textarea id="add-content__art-shortShort-label" name="article-shortDescr" class="add-content__art-shortShort-label" required=""></textarea> <br>
+						<script type="text/javascript"> CKEDITOR.replace( 'article-shortDescr' ); </script>
+
+						<!-- Полное описание -->
+						<label for="add-content__art-fullDescr-label" class="add-content__art-fullDescr">Полное описание: </label> <br>
+						<textarea id="add-content__art-fullDescr-label" name="article-fullDescr" class="add-content__art-fullDescr-label" required=""></textarea> <br>
+						<script type="text/javascript"> CKEDITOR.replace( 'article-fullDescr' ); </script>
+
+						<input type="submit" class="add-content__submit" value="Отправить">
+						
+
+
+					</form>
+
+				</main>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h4 class="footer__title">NormaLine</h4>
+			<p class="footer__text">copyright - spiritcode 2015</p>
+		</footer>
+
+	</div>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/app.js"></script>	
+
+	</body>
+</html>

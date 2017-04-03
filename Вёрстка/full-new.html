@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Полная новость</title>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+		<!--if lt IE 9
+		script(src='https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js')
+		script(src='https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js')
+		-->
+		<script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
+	</head>
+	<body>
+		
+
+	<div class="container">
+		
+		<header class="header text-center">
+			<h1 class="header__title"><a class="header__href" href="#">Normal Line</a></h1>
+			<p class="header__subtitle">Новостной блог про веб-разработку</p>
+		</header>
+
+
+		<!-- Content -->
+		<div class="row table">
+			<aside class="col-md-4 col-sm-4 col-xs-4 bg-black padding-menu table-cell">
+
+				<div class="panel">
+					<form action="/" id="autorization" method="post" class="autorization">
+						<input type="text" class="autorization__login" name="autor-login" placeholder="Логин" required>
+						<input type="password" class="autorization__pass" name="autor-pass" placeholder="Пароль" required>
+					</form>
+					<input type="submit" form="autorization" class="autorization__submit" value="Вход">
+					<div class="registration">
+						<button class="registration__button">Регистрация</button>
+						<form action="" method="post" class="registration__form">
+							<input type="text" class="registration__login" name="reg-login" placeholder="Логин" required="">
+							<input type="password" class="registration__pass" name="reg-pass" placeholder="Пароль" required="">
+							<input type="password" class="registration__pass" name="reg-pass2" placeholder="Пароль" required="">
+							<input type="submit" class="registration__submit" value="Отправить">
+						</form>
+					</div>
+				</div>
+
+				<div class="block">
+					<h2 class="block__title">Меню сайта</h2>
+					<ul class="block-list">
+						<li class="block-list__item">
+							<a href="index.html" class="block-list__href">Главная</a>
+						</li>
+						<li class="block-list__item">
+							<a href="category.html" class="block-list__href">Категории</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href">Шаблоны</a>
+						</li>
+					</ul>
+				</div>
+				<div class="block">
+					<h2 class="block__title">Популярные посты</h2>
+					<ul class="block-list block-list--padding">
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Тестирование компонентов в Un.Тестирование компонентов в Un...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">Программируем арт: openFramewor...</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+						<li class="block-list__item">
+							<a href="#" class="block-list__href ico-pulse">К вопросу расчета себестоимости</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="col-md-8 col-sm-8 col-xs-8 bg-white padding-content table-cell">
+				<main role="main" class="main">
+					<div class="full-article">
+						<h2 class="full-article__title">Выразительный JavaScript: Обработка событий</h2>
+						<div class="full-article__img">
+							<img src="image/articles/articles.jpg" class="img-responsive" alt="Картинка">
+						</div>
+						<div class="full-article__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iste explicabo et harum, earum dolore amet culpa corporis, impedit, blanditiis, sed excepturi vero totam optio nam dolor eum quibusdam cumque.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, eaque, ducimus! Corrupti, libero sint. Fugiat velit, iusto magni alias atque minus nemo inventore quisquam blanditiis ab officiis ea dolorum ex.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut natus dolor, quod sint repellendus recusandae assumenda nam itaque exercitationem dolore! Praesentium magnam sed obcaecati doloremque, magni sapiente repellendus a? Tenetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fuga harum eum eaque, ducimus architecto aspernatur. Dignissimos, dolorem corrupti eveniet optio qui mollitia vel reiciendis alias id odit veniam eaque!
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nostrum saepe magni incidunt veniam aspernatur ipsum neque quia, voluptatibus, fugit totam qui, nemo in pariatur exercitationem doloribus illo dolor sunt.
+						</div>
+					</div>
+
+					<div class="comments">
+						<h3 class="comments__title">Комментарии: </h3>
+
+						<button class="comments__add">Добавить комментарий</button>
+
+						<form method="post" class="comments__form">
+							<textarea id="comment" name="comment"></textarea>
+								<script type="text/javascript">
+									CKEDITOR.replace( 'comment' );
+								</script>
+
+								<input type="submit" class="comments__submit" value="Отправить"/>
+						</form>
+
+					</div>
+
+				</main>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h4 class="footer__title">NormaLine</h4>
+			<p class="footer__text">copyright - spiritcode 2015</p>
+		</footer>
+
+	</div>
+
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/app.js"></script>	
+
+	</body>
+</html>

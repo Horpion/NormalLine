@@ -1,0 +1,407 @@
+/*Подключение шрифтов*/
+@mixin font-face($font-name,$font-url){
+	@font-face {
+		font-family: $font-name;
+		src: local("" + $font-name +""),
+		url("../font/" + $font-url +"/"+ $font-name +".ttf"),
+		url("../font/" + $font-url +"/"+ $font-name + ".woff"),
+		url("../font/" + $font-url +"/"+ $font-name + ".woff2"),
+		url("../font/" + $font-url +"/"+ $font-name + ".eot");
+	}
+}
+
+@include font-face(имя файла, имя папки);
+/*END Подключение шрифтов*/
+
+
+/* ligth 300
+regular 400
+semi-bold 600 
+bold 700
+*/
+
+.clearfix::before,
+.clearfix::after{
+    content:"";
+    display:table;
+}
+.clearfix::after{
+    clear:both;
+}
+
+
+/* Adaptive height */
+.table{
+	display: table;
+    table-layout: fixed;
+}
+
+.table-cell{
+	display: table-cell;
+    vertical-align: top;
+    float:none;
+}
+
+
+/* Responsive */
+.video embed,
+.video object,
+.video iframe {
+	width: 100%;
+	height: auto;
+}
+							
+.img-responsive{
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+
+/* Text */
+.text-center{
+	text-align:center;
+}
+
+
+
+
+/* Background color */
+.bg-white{
+	background-color:#fff;
+}
+
+.bg-black{
+	background-color:#333337;
+}
+
+/* Padding */
+.padding-menu{
+	padding:20px 0;
+}
+
+.padding-content{
+	padding:15px 15px 50px 15px;
+}
+
+
+html,body{
+	font:400 16px "Open Sans";
+}
+
+body{
+	background:url('../image/background-img.png') no-repeat top center,
+				url('../image/background.jpg');
+	background-size:100% auto,auto;
+	padding-bottom:50px;
+}
+
+/* Header */
+.header{
+	padding:50px 0;
+	font-weight:600;
+	text-transform:uppercase;
+
+	
+	&__href{
+		color:#fff;
+	}
+
+	&__subtitle{
+		color:#aba8a8;
+	}
+}
+
+
+/* ------------- ASIDE -------------  */
+.block{
+	font:600 14px "Open Sans";
+	text-transform:uppercase;
+	margin-bottom:15px;
+
+	.block__title{
+		font-weight:20px;
+		padding:15px;
+		color:#505055;
+		background-color:#313135;
+	}
+}
+
+.block-list{
+	padding:0 15px;
+	font-weight:300;
+
+	&--padding{
+		padding-left: 32px;
+	}
+
+	&__item{
+		display:block;
+		margin-top:15px;
+		/* padding-left:20px; */
+	}
+
+	&__href{
+		color:#505055;
+	}
+}
+
+
+/* MAIN,ARTICLE*/
+.main__title{
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	text-transform:uppercase;
+	font-size:14px;	
+	font-weight:700;
+	color:#56565c;
+	border-bottom:1px solid #e8e8e8;
+}
+
+.article,.full-article{
+	padding-bottom:10px;
+	margin-bottom:15px;
+	border-bottom:2px solid #e8e8e8;
+	
+	&__title,&__img,&__text{
+		padding-bottom:10px;
+	}
+
+	&__href{
+		font-size:16px;
+		font-weight:600;
+		text-transform:uppercase;
+		color:#505055;
+	}
+
+	&__img{
+		max-width:550px;
+		margin: 0 auto;
+	}
+
+	&__text{
+		color:#c2c2c4;
+	}
+}
+
+.full-article__title{
+	font-size:16px;
+	font-weight:600;
+	text-transform:uppercase;
+	color:#505055;
+	padding-bottom:10px;
+}
+
+
+.panel{
+	padding: 0 15px;
+	margin-bottom: 25px;
+}
+
+/* Autorization form */
+.autorization{
+	position:relative;
+
+	input,&__submit{
+		border:none;
+	}
+
+	input:not([type='submit']){
+		width:100%;
+		padding:10px;
+		margin-bottom:5px;
+	}
+}
+
+.registration{
+	display:inline-block;
+	position:relative;
+
+	&__button{
+		border:none;
+	}
+
+	&__inform{
+		display:inline-block;
+		width: 100%;
+		margin-bottom: 6px;
+		text-align:center;
+	}
+
+	&__form{
+		display:none;
+		position: absolute;
+		max-width: 260px;
+		padding: 10px;
+		background: #4A474B;
+		bottom: 33px;
+		left: 25px;
+		border-radius: 5%;
+
+		&:after{
+			content:"";
+			position:absolute;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #4A474B;
+			bottom: -10px;
+			left: 20px;
+		}
+
+		input{
+			border:none;
+			margin-bottom:5px;
+		}
+
+		input:not([type="submit"]):not([type="reset"]){
+			padding: 10px;
+		}
+
+		input[type="submit"],
+		input[type="reset"]{
+			width:100%;
+			padding:5px;
+		}
+	}
+}
+
+/* Comments */
+.comments{
+	&__title{
+		font-size:16px;
+		font-weight:600;
+		text-transform:uppercase;
+		color:#505055;
+		padding-bottom:10px;
+	}
+
+	&__add,
+	&__submit{
+		background:none;
+	}
+
+	&__submit,
+	&__form{
+		margin-top:10px;
+	}
+
+	&__form{
+		display:none;
+	}
+}
+
+
+/* PAGINATION */
+.pagination{
+
+	&__href{
+		font-size:17px;
+		font-weight:600;
+		color:#969698;
+	}
+
+		&__href--active{
+			color:#000;
+			position:relative;
+		}
+
+		&__href--active:after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #000;
+			bottom: -5px;
+			left: 0%;
+		}
+
+	&__list,&__item{
+		display:inline-block;
+	}
+
+	&__item{
+		margin: 0 6px;
+	}
+}
+
+
+
+/* Add content */
+.add-content{
+
+	&__art-title-label{
+		padding:3px;
+	}
+
+	label{
+		margin-bottom:5px;
+	}
+
+	input{
+		width:50%;
+		margin-bottom:20px;
+	}
+
+	.cke{
+		margin-bottom:20px;
+	}
+}
+
+
+/* FOOTER */
+.footer{
+	padding:25px;
+
+	&__title,&__text{
+		font-weight:300;
+	}
+
+	&__title{
+		font-size:30px;
+		text-transform:uppercase;
+		color:#fff;
+	}
+
+	&__text{
+		font-size:13px;
+		color:#5f616b;
+	}
+}
+
+
+/* BUTTON */
+.article__read,
+.pagination__back,
+.pagination__next,
+.comments__add,
+.comments__submit,
+.add-content__submit{
+	font-size:12px;
+	display:inline-block;
+	padding:10px 20px;
+	color:#969698;
+	text-transform:uppercase;
+	border-radius:5px;
+	border:1px solid #969698;
+	background:none;
+}
+
+
+
+.ico-pulse{
+	position:relative;
+}
+.ico-pulse:before{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url("../image/sprite.png") no-repeat -30px -318px;
+	left: -17px;
+	top: 2px;
+}
+
+
+
